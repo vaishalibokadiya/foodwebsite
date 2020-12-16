@@ -1,0 +1,694 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+/* ##################### utility classes ######################### */
+.container{
+    width: 1200px;
+    max-width: 70%;
+    margin: auto;
+}
+.text-gray {
+    color: #444444;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    border: #16a083;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+.btn-primary{
+    color: #ffffff;
+    background: #16a083;
+    padding: 1rem 2.5rem;
+}
+
+/* ##################### navbar styling ########################## */
+
+/* for desktop mode */
+.text-yellow{
+    color: rgb(255, 208, 0)
+}
+
+.navbar input[type='checkbox'],
+.navbar .hamburgerlines{
+    display: none;
+}
+
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    color: #000;
+    background-color: #fff;
+    opacity: 0.85;
+    padding: 2rem 0;
+    z-index: 111;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+}
+
+.navbar .menubar li{
+    display: inline;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.navbar a:hover{
+    color: #117964;
+    transition: color 0.3s ease-in-out;
+}
+
+/* ####################### header styling ###################### */
+.showcase-area{
+    height: 55vh;
+    background: url("/images/header-image2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.showcase-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 8vh;
+    height: 100%;
+    font-size: 1.6rem;
+}
+
+/* ####################### about styling ######################## */
+.about{
+    
+    margin: 6rem auto;
+    /* background-color: rgba(181, 181, 181, 0.116); */
+    background-color: #f5f5f7;
+    /* box-shadow: rgba(181, 181, 181, 0.116); */
+    box-shadow: 2px 2px 2px 0px rgb(228, 227, 227);
+
+
+}
+.about h4{
+    margin-bottom: 1rem;
+}
+.about h3{
+    margin-bottom: 1.2rem;
+}
+.aboutcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-text p{
+    font-size: 1.4rem;
+    /* padding-bottom: 0.5rem; */
+    line-height: 2rem;
+}
+.about img{
+    /* width: 35rem;
+    max-width: 35%;
+    min-width: 25%; */
+    /* flex-basis: ; */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    max-width: 100%;
+    /* width: ; */
+    padding: 30px 10px;
+    height: 400px;
+    margin: auto;
+    object-fit: cover;
+    transform: translateX(150%);
+    animation: animation-image 1s ease-in-out forwards;
+}
+@keyframes animation-image{
+100%{
+transform: translate(0);
+}
+}
+.about .about-text{
+    /* width: 40rem; */
+    flex: 1 1 400px;
+    margin: auto;
+    transform: translateX(-150%);
+        animation: animation-text 1s ease-in-out forwards;
+}
+@keyframes animation-text{
+100%{
+    transform: translate(0);
+}
+}
+.btn-sec{
+    padding: 1rem 2rem;
+    color: #ffffff;
+    background: #16a083;
+    border: #16a083;
+}
+.category{
+    text-align: center;
+}
+.category-pics{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+    color: #ffffff;
+}
+.pic1{
+    background: url(/images/food1.jpg);
+    width: 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 18rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.pic2{
+    background: url(/images/food2.jpg);
+    width: 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 18rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.pic3{
+    background: url(/images/food3.jpg);
+    width: 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 18rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.text1{
+    opacity: 0;
+    z-index: 2;
+}
+.text2{
+    opacity: 0;
+    z-index: 2;
+}
+.text3{
+    z-index: 2;
+    opacity: 0;
+}
+.pic{
+    position: relative;
+}
+.text{
+    transform: translateY(150%);
+}
+
+
+.pic::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(0);
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+    transform-origin: 100% 100%;
+}
+.pic:hover::after{
+    transform: scaleY(1);
+    opacity: 1;
+}
+.pic:hover .text{
+    transform: translateY(-30%);
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+/* ################################# foodmenu styling ############################ */
+.foodmenu-section{
+    text-align: center;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+}
+.foodmenu-container{
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    /* height: auto; */
+    margin: 1rem 0;
+}
+.foodmenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 48%;
+    /* border: teal 1px solid; */
+}
+.foodmenu .foodmenu-img img{
+    border-radius: 50%;
+    display: block;
+    height: 15rem;
+    width: 15rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    margin: 1rem 0;
+}
+.foodmenu{
+    /* border: teal 2px solid; */
+    margin: 0.5rem;
+    /* border: blue 1px solid; */
+    min-width: 45%;
+    /* max-width: 60%; */
+}
+.foodmenu-text{
+    text-align: left;
+    display: inline-block;
+    margin: 2rem;
+}
+.foodmenu-text p{
+    font-size: 1.4rem;
+    color: #444444;
+}
+.foodmenu-text h2{
+    font-size: 1.7rem;
+}
+.foodmenu-text .price{
+    color: teal;
+    font-weight: 700;
+    padding-top: 0.5rem;
+}
+
+/* ####################### testimonial styling ####################### */
+
+/* .testimonial{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    /* height: 60vh; */
+    /*
+}
+.review .img img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+
+}
+.review .img{
+    background-color: crimson;
+}
+.review .text{
+    background-color: cyan;
+}
+.testimonial-container{
+    display: flex;
+    justify-content: space-between;
+    height: 35rem;
+}
+.review{
+    padding: 1rem 2rem;
+    width: 30%;
+    background: coral;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.review .img p{
+    font-weight: 700;
+    padding-top: 1rem;
+}
+.review p{
+    font-weight: 600;
+    font-size: 1.4rem;
+}*/
+/* .review i{
+    color: yellow;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+} */
+
+
+#testimonials{
+    padding: 5rem 0;
+    background-color: rgb(243, 243, 243);
+}
+.testimonial-title{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #555;
+}
+.testimonial-container{
+    display: flex;
+    padding: 1rem;
+    font-size: 1.6rem;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+}
+.testimonial-container .checked{
+    color: #ff9529;
+}
+.testimonial-box .testimonial-text{
+    margin: 1rem 0;
+    color: #444;
+}
+.testimonial-box{
+    text-align: center;
+    padding: 1rem;
+}
+.customer-photo img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin: auto;
+}
+.customer-name{
+    font-weight: 600;
+}
+
+
+
+/* ####################### contact styling ############################## */
+.contact .img{
+    width: 50%;
+
+}
+.contact img{
+    /* display: block; */
+    /* height: 10rem; */
+    height: 325px;
+    width: 100%;
+    object-position: center;
+    /* background-repeat: no-repeat; */
+    object-fit: cover;
+    display: block;
+    /* border: #444444 solid 1px; */
+}
+.contact{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+.contact .formm{
+    width: 50%;
+    /* margin: 1rem; */
+    padding: 0.5rem;
+    background-color: #ffffff;
+
+}
+.contact .formm .in{
+    display: block;
+    width: 100%;
+    /* border-spacing: 1rem; */
+    margin: 2rem 0;
+    /* background-color: #b9b9bbb9; */
+    border-style: none;
+    border-bottom: #444444b6 solid 1px;  
+}
+textarea{
+    border-style: none;
+    border-bottom: #444444b6 solid 1px ;
+    /* background-color: #b9b9bbb9; */
+
+    width: 100%;
+}
+#contact{
+    background-color: #8f8c8cce;
+    padding: 3rem;
+}
+
+/* ############################ footer styling ########################## */
+footer{
+    text-align: center;
+    background-color: rgb(34, 34, 34);
+    color: rgb(199, 198, 197);
+    font-size: 1.6rem;
+    padding: 3rem;
+    word-spacing: 0.6rem;
+}
+
+
+
+/* ################## media querries ################################ */
+@media (max-width: 980px){
+    .navbar{
+        opacity: 0.95;
+    }
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamburgerlines{
+        display: block;
+    }
+    .navbar-container{
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+    .navbar-container input[type="checkbox"]{
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 40px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+    }
+    .navbar-container .hamburgerlines{
+        display: block;
+        height: 32px;
+        width: 40px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .navbar-container .hamburgerlines .line{
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #333333;
+    }
+    .navbar-container .hamburgerlines .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar-container .hamburgerlines .line2{
+        /* transform-origin: 0% 0%; */
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar-container .hamburgerlines .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar .menubar{
+        padding-top: 100px;
+        background: #fff;
+        height: 100vh;
+        max-width: 300px;
+        transform: translateX(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 50px;
+        transition: transform 0.5s ease-in-out;
+    }
+    .navbar .menubar{
+        display: none;
+        /* margin-bottom: 3rem;
+        font-size: 2rem;
+        font-weight: 600; */
+        /* height: 100vh;
+        width: 100vw; */
+        
+        margin-left: 0;
+        padding-left: 0;
+        margin-right: 0;
+        padding-right: 0;
+        width: 100vw;
+        height: auto;
+    }
+    .menubar ul{
+        padding-bottom: 1rem;
+        /* width: 100vw; */
+    }
+    
+    .logo{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        right: 15px;
+        font-size: 3rem;
+    }
+    .navbar-container input[type="checkbox"]:checked ~ .menubar{
+        transform: translateX(0);
+        display: block;
+        /* width: 100vw; */
+
+    }
+    .navbar-container input[type="checkbox"]:checked ~ .menubar li{
+        display: block;
+        font-size: 2rem;
+        /* width: 100vw; */
+        /* height: auto; */
+        margin-bottom: 2rem;
+        /* border-bottom: #444 solid 2px; */
+    }
+    .navbar-container input[type="checkbox"]:checked ~ .hamburgerlines .line1{
+        transform: rotate(45deg);
+        transform-origin: center;
+    }
+    .navbar-container input[type="checkbox"]:checked ~ .hamburgerlines .line2{
+        /* transform: scaleY(0); */
+        display: none;
+    }
+    .navbar-container input[type="checkbox"]:checked ~ .hamburgerlines .line3{
+        transform: rotate(-45deg);
+    }
+    .foodmenu{
+        flex-direction: row;
+        /* text-align: center; */
+        width: 100%;
+    }
+
+
+    
+
+
+
+
+
+.foodmenu-container{
+    flex-direction: column;
+    align-items: stretch;
+
+}
+.foodmenu:not(:last-child){
+    margin-bottom: 3rem;
+}
+.foodmenu-img{
+    margin: 0;
+}
+
+}
+
+/* ################# small screen ######################000 */
+@media (max-width: 500px)
+{
+    /* html{
+        font-size: 50%;
+    } */
+    .category-pics{
+        flex-direction: column;
+    }
+    .category-pics .pic{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .testimonial-container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .testimonial-box{
+        margin-bottom: 4rem;
+    }
+    .foodmenu-container img{
+        margin: auto;
+    }
+    .foodmenu{
+        flex-direction: column;
+        /* text-align: center; */
+        width: 100%;
+    }
+    .foodmenu-text{
+        text-align: center;
+    }
+    .foodmenu-container{
+        width: 90%;
+    }
+    .contact{
+        display: flex;
+        
+        flex-direction: column;
+        /* margin-bottom: 8rem; */
+    }
+    .contact .img{
+        width: 90%;
+        margin: 3rem auto;
+    }
+    .contact .formm{
+        width: 90%;
+        margin: 3rem auto;
+    }
+}
